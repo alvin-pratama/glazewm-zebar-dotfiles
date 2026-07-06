@@ -82,7 +82,7 @@ Click the icon on the right side of the bar to cycle:
 │       ├── zpack.json           # Zebar widget manifest
 │       └── package.json         # Dependencies
 ├── windhawk/
-│   └── file-win-plus-glaze-2.txt  # Windhawk Taskbar Styler config
+│   └── theme.txt  # Windhawk Taskbar Styler config
 ├── screenshots/                 # Preview images
 │   ├── full-desktop.png
 │   ├── zebar.png
