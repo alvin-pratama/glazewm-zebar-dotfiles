@@ -1,0 +1,204 @@
+theme: ''
+styleConstants:
+  - IslandVerticalMargin=2
+  - IslandHorizontalMargin=0
+  - TaskbarFrameMaxWidth=8000
+controlStyles:
+  - target: ':root > ScrollViewer > ScrollContentPresenter > Border > Grid'
+    styles:
+      - ColumnDefinitions:=<ColumnDefinitionCollection></ColumnDefinitionCollection>
+      - HorizontalAlignment=Stretch
+      - Background:=<SolidColorBrush Color="#00000000"/>
+      - ActualWidth=>containerGridWidth
+  - target: Taskbar.TaskbarFrame
+    styles:
+      - HorizontalAlignment=Center
+      - Width=Auto
+      - Margin=0,0,0,0
+      - MaxWidth={{min($TaskbarFrameMaxWidth, containerGridWidth)}}
+  - target: Taskbar.TaskbarFrame > Grid
+    styles:
+      - CornerRadius=7,7,7,7
+      - Padding=10,0,10,0
+      - Margin=0,$IslandVerticalMargin,0,$IslandVerticalMargin
+      - HorizontalAlignment=Center
+      - Background=#1f1f1f
+      - BorderThickness=1
+      - BorderBrush=#4f4f4f
+  - target: SystemTray.SystemTrayFrame
+    styles:
+      - HorizontalAlignment=Right
+      - Width=Auto
+      - Margin=3,0,3,0
+  - target: Grid#SystemTrayFrameGrid
+    styles:
+      - Margin=0,9,0,9
+      - Opacity=1
+      - CornerRadius=4
+      - Padding=6,0,6,0
+      - Background=#1f1f1f
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Microsoft.UI.Xaml.Controls.ItemsRepeater#TaskbarFrameRepeater
+    styles:
+      - Width=Auto
+      - HorizontalAlignment=Center
+  - target: SystemTray.ChevronIconView
+    styles:
+      - Padding=0
+  - target: SystemTray.NotifyIconView#NotifyItemIcon
+    styles:
+      - Padding=0
+  - target: SystemTray.OmniButton
+    styles:
+      - Padding=0
+  - target: SystemTray.CopilotIcon
+    styles:
+      - Padding=0
+  - target: Taskbar.Gripper#GripperControl
+    styles:
+      - Width=Auto
+      - MinWidth=24
+  - target: SystemTray.StackListView#IconStack > ItemsPresenter > StackPanel > ContentPresenter > SystemTray.IconView#SystemTrayIcon
+    styles:
+      - Padding=0
+  - target: SystemTray.Stack#ShowDesktopStack
+    styles:
+      - Margin=0,-4,-12,-4
+  - target: SystemTray.OmniButton#NotificationCenterButton > Grid > ContentPresenter > ItemsPresenter > StackPanel > ContentPresenter > SystemTray.IconView#SystemTrayIcon > Grid#ContainerGrid
+    styles:
+      - Padding=2,0,2,0
+  - target: SystemTray.AdaptiveTextBlock#LanguageInnerTextBlock > Windows.UI.Xaml.Controls.TextBlock#InnerTextBlock
+    styles:
+      - TextTrimming=1
+      - Height=18
+      - FontSize=12
+  - target: TextBlock#TimeInnerTextBlock
+    styles:
+      - FontSize=12
+      - Visibility=Visible
+  - target: Taskbar.TaskListLabeledButtonPanel > Windows.UI.Xaml.Controls.TextBlock
+    styles:
+      - Visibility=Collapsed
+      - FontSize=0
+  - target: Windows.UI.Xaml.Controls.TextBlock#TextBlock
+    styles:
+      - Visibility=Visible
+  - target: Taskbar.TaskListButtonPanel > Grid#IndicatorGrid
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListButtonPanel > Rectangle#Indicator
+    styles:
+      - Visibility=Collapsed
+      - Height=0
+      - Fill=Transparent
+  - target: SystemTray.OmniButton#ControlCenterButton
+    styles:
+      - Visibility=Visible
+      - Width=Auto
+      - MaxWidth=8000
+      - Margin=0
+      - Padding=2,0,2,0
+  - target: SystemTray.OmniButton#ControlCenterButton > Grid > ContentPresenter > ItemsPresenter > StackPanel > ContentPresenter[4]
+    styles:
+      - Visibility=Collapsed
+  - target: SystemTray.OmniButton#ControlCenterButton > Grid > ContentPresenter > ItemsPresenter > StackPanel > ContentPresenter[5]
+    styles:
+      - Visibility=Collapsed
+  - target: SystemTray.OmniButton#ControlCenterButton > Grid > ContentPresenter > ItemsPresenter > StackPanel > ContentPresenter[6]
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel
+    styles:
+      - Visibility=Visible
+      - HorizontalAlignment=Center
+  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#BackgroundElement
+    styles:
+      - Visibility=Collapsed
+      - Background=Transparent
+      - Background@PointerOver=Transparent
+      - Background@Selected=Transparent
+      - Background@SelectedPointerOver=Transparent
+      - BorderBrush=Transparent
+  - target: Taskbar.TaskListLabeledButtonPanel > Border#BackgroundElement
+    styles:
+      - Visibility=Collapsed
+  - target: SystemTray.OmniButton > Grid > Border
+    styles:
+      - Visibility=Collapsed
+      - Background=Transparent
+  - target: SystemTray.IconView > Grid > Border
+    styles:
+      - Visibility=Collapsed
+      - Background=Transparent
+  - target: Microsoft.UI.Xaml.Controls.Button#SystemTrayItemControl
+    styles:
+      - Background=Transparent
+      - BorderBrush=Transparent
+  - target: Microsoft.UI.Xaml.Controls.ListViewItem
+    styles:
+      - Background=Transparent
+      - BorderBrush=Transparent
+  - target: Taskbar.TaskListButtonPanel@CommonStates > Border#BackgroundElement
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.SearchBoxButton#SearchBoxButton[AutomationProperties.AutomationId=SearchButton] > Taskbar.TaskListButtonPanel
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.AugmentedEntryPointButton#AugmentedEntryPointButton
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListButtonPanel#OverflowToggleButtonRootPanel
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskbarExtensionElement
+    styles:
+      - Visibility=Collapsed
+  - target: SystemTray.IconView#SystemTrayIcon > Grid#ContainerGrid@ > Rectangle#ShowDesktopPipe
+    styles:
+      - Fill=Transparent
+  - target: TextBlock#BatteryTextBlock
+    styles:
+      - FontSize=13
+      - Visibility=Visible
+  - target: TextBlock#DateInnerTextBlock
+    styles:
+      - Visibility=Visible
+      - FontSize=9
+  - target: TextBlock#TimeInnerTextBlock
+    styles:
+      - Visibility=Visible
+      - FontSize=11
+  - target: Taskbar.TaskbarBackground#BackgroundControl
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundStroke
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Margin=0,1,0,0
+      - VerticalAlignment=Top
+      - Fill=Transparent
+      - Height=0
+      - Width=0
+      - Fill@ActiveRunningIndicator=Transparent
+      - Width@ActiveRunningIndicator=0
+themeResourceVariables:
+  - ControlCenterButtonBackgroundPointerOver=#00000000
+  - ControlCenterButtonBackgroundPressed=#00000000
+  - NotificationCenterButtonBackgroundPointerOver=#00000000
+  - NotificationCenterButtonBackgroundPressed=#00000000
+  - SystemTrayItemControlBackgroundPointerOver=#00000000
+  - SystemTrayItemControlBackgroundPressed=#00000000
+  - SystemControlHighlightListLowBrush=#00000000
+  - SystemControlHighlightListMediumBrush=#00000000
+  - SystemTrayItemButtonBackgroundPointerOver=#00000000
+  - SystemTrayItemButtonBackgroundPressed=#00000000
+  - TrayItemTaskbarHoverBackgroundBrush=#00000000
+  - TrayItemTaskbarPressedBackgroundBrush=#00000000
+xamlDiagnosticsHandling: alert

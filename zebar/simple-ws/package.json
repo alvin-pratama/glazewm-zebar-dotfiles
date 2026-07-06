@@ -1,0 +1,16 @@
+{
+  "name": "simple-ws",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app.js --bundle --format=esm --outfile=app-bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.28.0",
+    "zebar": "^3.3.1"
+  }
+}
